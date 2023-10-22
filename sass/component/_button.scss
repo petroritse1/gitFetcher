@@ -1,0 +1,20 @@
+.btn{
+    position:absolute;
+    border:none;
+    background:none;
+    color:var(--clr-bg-light);
+    font-size:1.8rem;
+    margin-left:-4rem;
+    margin-top:1rem;
+}
+
+.btn-next{
+      padding:.75rem 1.25rem;
+      border-radius: .95rem;
+      background:var(--color-primary);
+      border:none;
+      font-size:1.8rem;
+      color:var(--color-text);
+      cursor:pointer;
+
+}

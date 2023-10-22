@@ -1,0 +1,23 @@
+.repo{
+    display:flex;
+    align-items: flex-start;
+    
+    justify-content: space-between;
+    gap:2rem;
+    flex-direction:column;
+    margin-top:3rem;
+    @include device(big__tab){
+        flex-direction:row;
+    }
+    &__repo{
+        width:90%;
+        
+    }
+    &__sidebar{
+        width:90%;
+        
+        @include device(tab){
+            width:30%;
+        }
+    }
+}

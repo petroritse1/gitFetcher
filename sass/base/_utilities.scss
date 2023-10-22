@@ -1,0 +1,15 @@
+.center{
+    @include device(tab){
+
+        
+        margin:0 auto;
+        width:70vw;
+        max-width:120rem;
+    }
+}
+
+.showing{
+    display:flex;
+    flex-direction: column;
+    
+}

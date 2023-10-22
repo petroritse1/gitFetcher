@@ -1,0 +1,32 @@
+.error{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),url(/./src/assets/5446451.jpg ) center/cover no-repeat;
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    min-width:100vw;
+    &__banner{
+        margin-top:-15rem;
+        padding:0 3rem;
+        text-align:center;
+        color:var(--clr-white);
+        
+    };
+    &__header{
+        font-size:8rem;
+        letter-spacing: 10px;
+        color:var(--color-primary);
+        font-weight:700;
+    }
+    &__text{
+        max-width:40rem;
+        margin:1rem auto;
+        font-size:1.4rem;
+        padding-top:2rem;
+        letter-spacing:var(--spacing);
+        @include device(small__tab){
+            font-size:1.6rem;
+        }
+    }
+}
