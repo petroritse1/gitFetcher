@@ -18,7 +18,7 @@
     &__card{
         background:var( --color-background-100);
         border-radius: .9rem;
-        width:10rem;
+        width:8.2rem;
         display:flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -38,10 +38,7 @@
             box-shadow: var(--clr-bg-dark);
         }
     }
-    
-    // &__img{
 
-    // }
     &__info{
        text-align: center;
        margin-bottom:1rem;
