@@ -10,6 +10,7 @@ import AllRepo from '../component/AllRepo';
 import SingleRepo from '../component/SingleRepo';
 import Dashboard from '../component/Dashboard';
 import ErrorPage from '../component/ErrorPage';
+import TestError from '../component/TestError';
  
 function App() {
    
@@ -121,7 +122,7 @@ function App() {
            </Repo>}>
                     <Route path='page'  element={<SingleRepo repoData={repoData} userData={userData} selectedName={selectedName}/>}/>
                     <Route path='all'  element={<AllRepo   allRepoData={allRepoData} onSelectedName={setSelectedName}  onNext={next} onPrev={prev} perPage={perPage} isLoading={isLoading} />}/>
-                    
+                    <Route path="error" element={<TestError/>} />
                   
           </Route>
           <Route path="*" element={<ErrorPage isLoading={isLoading}/>}/>

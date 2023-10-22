@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import TestError from './TestError'
 
 function Dashboard_List({item}) {
     const {text,info,img} = item
@@ -28,7 +29,7 @@ function Dashboard_List({item}) {
                <p className="dashboard__text">{text}</p>
              </div>
                  </div>}
-              {isError && <Link  onClick={()=><Header/>}><div className="dashboard__card">
+              {isError && <Link  to="repo/error"><div className="dashboard__card">
                         <div className="dashboard__img">{img}</div>
                         <div >
                         

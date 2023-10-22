@@ -2,7 +2,7 @@
     display:flex;
     align-items: flex-start;
     justify-content: space-between; 
-    margin-top:3rem;
+    margin:4rem 0;
     // @include device(tab){
         
     // }
@@ -15,14 +15,16 @@
         background:var( --color-background-100);
         
         border-radius: .9rem;
-        width:10rem;
+        width:6rem;
         display:flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding:0.75rem 1rem;
-        @include device(big__tab){
+        padding:0.45rem 0.75rem;
+        
+        @include device(tab){
             padding:1rem 1.25rem;
             width:12rem;
+
             
            }
         
@@ -41,15 +43,17 @@
        text-align: center;
        margin-bottom:1rem;
        font-weight:700;
-       font-size:2rem;
+       font-size:1.2rem;
        color:var(--color-text);
+       
        @include device(tab){
         font-size:2.4rem;
        }
     }
     &__text{
-       font-size: 1.4rem;
-       color:var(--color-text-dark)
+       font-size: 1rem;
+       color:var(--color-text-dark);
+       display:none;
     }
 
 }
