@@ -1,11 +1,15 @@
 .dashboard{
     display:flex;
     align-items: flex-start;
-    justify-content: space-between; 
-    margin:4rem 0;
-    // @include device(tab){
-        
-    // }
+    justify-content: center; 
+    margin:4rem 0 5rem 0;
+    gap:1rem;
+    width:auto;
+    
+    @include device(tab){
+ 
+        gap:6rem;
+    }
     &__list{
          
         list-style-type: none;
@@ -13,9 +17,8 @@
     }
     &__card{
         background:var( --color-background-100);
-        
         border-radius: .9rem;
-        width:6rem;
+        width:10rem;
         display:flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -43,7 +46,7 @@
        text-align: center;
        margin-bottom:1rem;
        font-weight:700;
-       font-size:1.2rem;
+       font-size:1.6rem;
        color:var(--color-text);
        
        @include device(tab){
@@ -53,7 +56,9 @@
     &__text{
        font-size: 1rem;
        color:var(--color-text-dark);
-       display:none;
+        @include device(tab){
+            font-size:1.4rem;
+        }
     }
 
 }

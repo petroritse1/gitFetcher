@@ -4,6 +4,7 @@ import Profile from './Profile'
 import {nanoid} from "nanoid";
  
 import {Book,Code,Inbox,User,Users} from "react-feather";
+import UserProfile from './UserProfile';
 // import {GoRepo } from "react-icons/go"
 
 
@@ -45,7 +46,7 @@ function Dashboard({userData}) {
             )})}
             
             </nav>
-            {isData && <Profile userData={userData}/>}
+            {isData && <UserProfile userData={userData}/>}
         </header>
     )
 }

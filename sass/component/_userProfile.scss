@@ -1,12 +1,14 @@
-.profile{
+.userProfile{
     
-    display:flex;
+    // display:flex;
     align-items: center;
     justify-content: space-between;
      
     padding:1rem ;
     border-top-right-radius: .9rem;
     border-top-left-radius: .9rem;
+    
+    
  
  
     @include device(tab){
@@ -23,27 +25,35 @@
     &__card{
         
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         column-gap:2rem;
         width:100%;
-        @include device(tab){
-            flex-direction:column;
-            background-color: none;
+        margin-top:2rem;
+        flex-direction:column;
+        position:relative;
+        z-index:-2;
+         
+        &::after{
+            content:"🧛‍♀️";
+            position:absolute;
+            border:2px solid var(--color-text);
+            border-radius:50%;
+            background: var(--clr-white);
+            transform:translateX(7rem);
+             margin-top:4rem;
+            z-index:100;
         }
        
     }
    
     &__img{
-        width:3rem;
-        height:3rem;
-        border-radius:50%;
-        @include device(tab){
+        
             width:15rem;
             height:15rem;
             border-radius: 50%;
             margin-top:-5rem;
             border:#fff 6px solid;
-        }
+        
     }
     &__name{
         color:var(--color-text);
@@ -51,7 +61,7 @@
     }
     &__id{
       
-        display:none;
+      
         @include device(tab){
             color:var(--color-text-dark);
             font-size:1.4rem;
@@ -62,44 +72,46 @@
 
     }
     &__bio{
-        display:none;
-        @include device(tab){
-            font-size:1.8rem;
-            margin:3rem 0 2rem 0;
-            color:var(--clr-white);
-        }
+        margin:3rem 0 2rem 0;
+        font-size:1.8rem;
+        
+        color:var(--clr-white);
+        
+ 
     }
     &__article{
-        display:none;
-        @include device(tab){
-            display:flex;
-            row-gap:.5rem;
-            column-gap:1rem;
-            flex-direction: column;
-            margin-top:2rem;
-            align-items: center;
-            
-            width:100%;
-        }
+        
 
-    &__icon{
-        font-size:1.8rem;
-        height:4rem;
-        width:4rem;
+        display:flex;
+        flex-direction: column;
+        row-gap:1rem;
     }
+    &__border{
+        width:50%;
+        margin-bottom:2rem;
+        border-top: 1px solid var(--color-text-dark);  
 
+    }
+    &__text{
+        text-align: center;
+        
+    }
+    &__icon{
+        
+        height:3rem;
+        width:3rem;
     }
     &__info{
-        display:none;
-        @include device(big__tab){
+        
+        
             display: flex;
             align-items: flex-start;
             column-gap: 1rem;
-            justify-content: space-between;
+            
              font-size:1.4rem;
-            width:80%;
+           
             text-align:center;
-        }
+        
     }
      
 }
