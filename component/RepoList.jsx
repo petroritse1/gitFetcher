@@ -26,7 +26,7 @@ function RepoList({item,onSelectedName}) {
                      
                             <p>Starter files for {name} project</p>
                     </div>
-                    <div>
+                    <div className="card__time">
                         
                         <p>{format(created_at)}</p>
                     </div>
