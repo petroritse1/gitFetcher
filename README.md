@@ -35,37 +35,18 @@ Click on the card for the desired operation you want to perform
    - Bio  to get user profile 
    - Error to activate the error boundary
 
-4. **Clck on the next buttont to go the next repo**: 
-To calculate the result, simply press the "=" (equals) button. 
+4. **Clck on the next button to go the next repo**: 
+Click on next button to navigate to next repo if repo 
 
-5. **View the Result**: The result of the calculation will be displayed on your screen. 
-
-That's it! You can repeat these steps for any other fetches you need to make.
-
-
+ 
 ## Built with
 
--  HTML
-
-```html
-    <div class="wrapper">
-      <h1>Circle-22 Calculator Project</h1>
-      <form>
-        <div class="input-box">
-          <input type="text" name="display" class="display" />
-        </div>
-        <div class="box">
-          <input type="button" value="AC" />
-          <input type="button" value="DE" />
-          <input type="button" value="." />
-          <input type="button" value="/" />
-        </div>
-      </form>
-    </div>
-```
-
-- CSS properties
-
+-html
+-css
+-sass
+-react
+-javascript
+ 
  
  
  
@@ -99,8 +80,8 @@ npm run dev
 
 ## Links
 
-- [GitHub](https://github.com/Doziechuks/Cirlcle-22-Calculator-Assignment)
-- [Live link](https://circle-22-calculator-project.netlify.app/)
+- [GitHub](https://github.com/petroritse1/gitFetcher)
+- [Live link](https://git-fetcher-app.netlify.app/)
 
 ## Creator
 
