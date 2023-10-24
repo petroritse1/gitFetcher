@@ -4,8 +4,10 @@
     background:none;
     color:var(--clr-bg-light);
     font-size:1.8rem;
-    margin-left:-4rem;
-    margin-top:1rem;
+    // margin-left:-4rem;
+    // margin-top:1rem;
+    transform:translate(-150%,50%);
+    cursor:pointer;
 }
 
 .btn-next{

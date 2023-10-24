@@ -33,7 +33,7 @@ function Dashboard({userData}) {
     return (
         <header>
 
-            <nav className="dashboard center">
+            <div className="dashboard">
             {newUserData.map((item)=>{
                 return(
                     <ul className='dashboard__list'> 
@@ -45,7 +45,7 @@ function Dashboard({userData}) {
 
             )})}
             
-            </nav>
+            </div>
             {isData && <UserProfile userData={userData}/>}
         </header>
     )

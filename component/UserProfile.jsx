@@ -2,12 +2,14 @@ import {React,useEffect} from 'react'
 import {MapPin,Clock, Users,User} from "react-feather";
 import {format} from "timeago.js";
 import Loader from './Loader';
+import {FcImageFile} from "react-icons/fc"
 
 import {RiGitRepositoryLine} from 'react-icons/ri';
+import Language from './Language';
 function UserProfile({userData,isLoading}) {
     if(userData === null) return;
      
-    const {avatar_url,login,created_at,followers,following,location,public_repos,email,bio,name} = userData
+    const {avatar_url,login,created_at ,location,public_repos,bio,name,emoji} = userData
     
      
     
@@ -18,19 +20,19 @@ function UserProfile({userData,isLoading}) {
             <div className="userProfile__card">
                 <div className="userProfile__img-box">
                     
-                    <img src={avatar_url} alt="work" className="userProfile__img" />
+                    <img src={avatar_url ? avatar_url:FcImageFile} alt="work" className="userProfile__img" />
                    
                 </div>
                 <div className="userProfile__text">
-                    <h3 className="userProfile__name">{name}</h3>
-                    <h5 className="userProfile__id">{login}</h5>
+                    <h3 className="userProfile__name">{name ? name :"Github user"}</h3>
+                    <h5 className="userProfile__id">{login ?login:"Github login"}</h5>
 
                 </div>
-                <div>
-                     {bio && <p>{bio}</p>}
+                <div className='userProfile__emoji'>
+                     {emoji ? <p>{emoji}</p>:<p>🧛‍♀️</p>}
                 </div>
                 <div className="userProfile__bio">
-                    {bio ? <p>{bio}</p>:<p>Am a fun guy||</p>}
+                    {bio ? <p>{bio}</p>:<p>I love computer<Language/></p>}
 
                 </div>
                 <div className="userProfile__border"></div>

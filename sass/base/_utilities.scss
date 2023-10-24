@@ -1,11 +1,12 @@
 .center{
-    @include device(tab){
+    
 
-        
-        margin:0 auto;
-        width:70vw;
-        max-width:120rem;
-    }
+    
+    margin:0 auto;
+    width:85vw;
+    max-width:120rem;
+    padding-top:2rem;
+
 }
 
 .showing{

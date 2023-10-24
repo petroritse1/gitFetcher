@@ -1,10 +1,9 @@
 import React from 'react'
  
 // import { Link } from 'react-router-dom';
-// import Dashboard from './Dashboard';
-// import User from './User';
 import Button from './Button';
 import {FaMagnifyingGlass} from "react-icons/fa6"
+
 
 
 function Form({value,setValue,onUsername}) {

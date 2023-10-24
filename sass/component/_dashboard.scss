@@ -1,30 +1,63 @@
 .dashboard{
-    display:flex;
-    align-items: flex-start;
-    justify-content: center; 
-    margin:4rem 0 5rem 0;
-    gap:1rem;
-    width:auto;
+    display:grid;
+    grid-template-columns: repeat(2,minmax(3rem,1fr));
+    row-gap:1rem;
+    column-gap:.2rem;
+   margin:2rem 0 8rem 0;
+
+   
+    
+    @include device(phone){
+        
+        display:flex;
+        align-items: flex-start;
+        justify-content: center; 
+        margin-top:3rem;
+        margin-bottom:5rem;
+        gap:1rem;
+        
+    }
     
     @include device(tab){
- 
-        gap:6rem;
+        
+        gap:3rem;
     }
     &__list{
          
         list-style-type: none;
         
     }
+
+    &__card-box{
+        align-self: center;
+ 
+       
+       
+    }
     &__card{
         background:var( --color-background-100);
         border-radius: .9rem;
-        width:8rem;
+        width:11rem;
         display:flex;
+        margin-bottom: 3rem;
         align-items: flex-start;
-        justify-content: space-between;
         padding:0.45rem 0.75rem;
+        margin:0 auto;
+        margin-left:2rem;
+
+        
+        @include device(phone){
+            width:8rem;
+           margin-left:0;
+        }
         
         @include device(tab){
+            padding:1rem 1.25rem;
+            width:10rem;
+            
+            
+           }
+        @include device(big__tab){
             padding:1rem 1.25rem;
             width:12rem;
 
@@ -47,14 +80,15 @@
        color:var(--color-text);
        
        @include device(tab){
-        font-size:2.4rem;
+        font-size:2rem;
        }
     }
     &__text{
-       font-size: 1rem;
+       font-size: .8rem;
        color:var(--color-text-dark);
+       padding-left:.5rem;
         @include device(tab){
-            font-size:1.4rem;
+            font-size:1rem;
         }
     }
 

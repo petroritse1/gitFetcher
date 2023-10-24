@@ -11,6 +11,7 @@ import SingleRepo from '../component/SingleRepo';
 import Dashboard from '../component/Dashboard';
 import ErrorPage from '../component/ErrorPage';
 import TestError from '../component/TestError';
+import Main from '../component/Main';
  
 function App() {
    
@@ -46,7 +47,7 @@ function App() {
       finally{
         setIsLoading(false)
       }
-        }fetchSingleRepo()},[selectedName])
+        }fetchSingleRepo()},[selectedName,username])
 
   useEffect(function(){
     if(!username) return
@@ -93,7 +94,7 @@ function App() {
        finally{
          setIsLoading(false)
        }
-         }fetchReposData()},[perPage])
+         }fetchReposData()},[perPage,username])
   
 
   function prev(){
@@ -112,16 +113,25 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path="/" index element={
-              <>
+              <Main>
             <Header><Form value={value} setValue={setValue} onUsername={setUsername} /></Header>
             <Dashboard userData={userData} isLoading={isLoading}/>
-              </>
+              </Main>
             } />
            
           <Route path="repo" element={<Repo value={value} setValue={setValue} onUsername={setUsername}><Profile userData={userData}/> 
            </Repo>}>
-                    <Route path='page'  element={<SingleRepo repoData={repoData} userData={userData} selectedName={selectedName}/>}/>
-                    <Route path='all'  element={<AllRepo   allRepoData={allRepoData} onSelectedName={setSelectedName}  onNext={next} onPrev={prev} perPage={perPage} isLoading={isLoading} />}/>
+                    <Route path='page'  element={
+                    <Main>
+
+                    <SingleRepo repoData={repoData} userData={userData} selectedName={selectedName}/>
+                    </Main>
+                    }/>
+                    <Route path='all'  element={<Main>
+                      <AllRepo   allRepoData={allRepoData} onSelectedName={setSelectedName}  onNext={next} onPrev={prev} perPage={perPage} isLoading={isLoading}/>
+                      </Main>
+                       }
+                       />
                     <Route path="error" element={<TestError/>} />
                   
           </Route>

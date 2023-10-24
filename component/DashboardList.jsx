@@ -8,8 +8,8 @@ function Dashboard_List({item}) {
     const isError = text === "boundary"
     
     return (
-      <div>
-      <Outlet/>     
+      <div className='dashboard__card-box'>
+      
       
       {isRepo && <Link to="/repo/all"><div className="dashboard__card">
                         <div className="dashboard__img">{img}</div>

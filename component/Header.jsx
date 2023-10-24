@@ -12,7 +12,7 @@ function Header({children}) {
 
                     <div className="navbar__img-box">
 
-                    <img src={img}/>
+                    <img src={img} className='navbar__img'/>
                     </div>
              <h1  className="navbar__title">GitFetcher</h1>
             </div>
