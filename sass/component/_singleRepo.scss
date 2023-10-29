@@ -2,10 +2,11 @@
     background:var(--color-background-500);
     border-top-right-radius: .9rem;
     border-top-left-radius: .9rem;
-    width:78%;
+    width:90%;
     margin:0;
     @include device(big__tab){
         margin:5.2rem 0  0 3.2rem;
+        width:70%;
         
     }
 

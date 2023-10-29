@@ -5,7 +5,6 @@ import RepoList from './RepoList';
 
 
 import Loader from './Loader';
-import Spinner from './Spinner';
 import Button from './Button';
  
 
@@ -15,12 +14,13 @@ import Button from './Button';
 function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {
     if (allRepoData === null) return;
     let allRepoDataLength = allRepoData.length
+    console.log(allRepoDataLength)
    
     return (
         <>
          
+        {isLoading && <Loader/>}    
         <div className="showing">
-                 {isLoading && <Loader/>}    
                 <div className="card">
                     {allRepoData.map((item)=>{
                         return(
@@ -33,7 +33,7 @@ function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {
                 <div className="card__btns">
 
           {perPage >1 && allRepoDataLength > 0 &&<Button style="btn-next" onClick={onPrev}>prev</Button> }
-          {allRepoDataLength >1 &&<Button style="btn-next" onClick={onNext}>next</Button> }
+          {allRepoDataLength > 2 &&<Button style="btn-next" onClick={onNext}>next</Button> }
                 </div>
                
         </div>

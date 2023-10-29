@@ -2,8 +2,10 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  /* margin:0 auto; */
+ 
   margin:0 auto;
-  margin-top:4rem;
+   
     width: 50px;
     height: 24px;
     background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
