@@ -2,12 +2,12 @@
     display:flex;
     align-items: flex-start;
     
-    gap:1rem;
+    row-gap:3rem;
     flex-direction:column;
 
     
     
-    @include device(big__tab){
+    @include device(bigger__tab){
         flex-direction:row;
     }
     &__repo{

@@ -6,8 +6,9 @@ import RepoList from './RepoList';
 
 import Loader from './Loader';
 import Button from './Button';
-import Header from './Header';
-import Form from './Form';
+ 
+
+// A component that shows all the repo the user have
 
 
 function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {

@@ -13,6 +13,7 @@ import ErrorPage from '../component/ErrorPage';
 import TestError from '../component/TestError';
 import Main from '../component/Main';
 import Footer from '../component/Footer';
+import { ToastContainer, toast } from 'react-toastify';
  
 function App() {
    
@@ -57,6 +58,7 @@ function App() {
        try{
          const res = await fetch(`https://api.github.com/users/${username}`)
          if(!res.ok){
+           toast.error("failed to get user!")
            throw new Error("failed to get user")
 
           }
@@ -67,7 +69,8 @@ function App() {
        }
        catch(err){
          setIsError(err.message)
-         if (err.name !== 'AbortError')setIsError(err.message)
+         toast.error("User not found")
+          
  
        }
        finally{
@@ -111,6 +114,7 @@ function App() {
 
   return (
     <>
+    <ToastContainer position='top-center' />
     <BrowserRouter>
         <Routes>
             <Route path="/" index element={

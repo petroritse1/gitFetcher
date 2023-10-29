@@ -9,16 +9,13 @@ import { Link, Outlet,useLocation } from 'react-router-dom';
  
 function Repo({children,setValue,onUsername,value,isLoading}) {
       const location = useLocation()
-      console.log(location.pathname)
       const isPages = location.pathname === "/repo/page"
-
-    
     return (
   <>    
        
         <div className="container">
-            {!isPages && <Header><Form value={value} setValue={setValue} onUsername={onUsername} /></Header>
-            }
+             <Header>{!isPages &&<Form value={value} setValue={setValue} onUsername={onUsername} />}</Header>
+            
             <div className="repo">
 
                 <div className='repo__sidebar'>

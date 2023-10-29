@@ -8,7 +8,33 @@ function Profile({userData,isLoading}) {
     if(userData === null) return;
      
     const {avatar_url,login,created_at,followers,following,location,public_repos,email,bio,name} = userData
-    
+    let followersCount = followers.toString()
+    let followingCount = following.toString()
+    if(followers.toString().length=== 4){
+        //    
+            followersCount = `${followersCount.substring(0, 1)}K`
+            followingCount = `${followingCount.substring(0, 1)}K`
+        }
+        else if(followers.toString().length === 5){
+            
+             
+            followersCount = `${followersCount.substring(0, 2)}K`
+            followingCount = `${followingCount.substring(0, 2)}K`
+        }
+        else if(followers.toString().length=== 6){
+            followersCount = `${followersCount.substring(0, 1)}M`
+            followingCount = `${followingCount.substring(0, 1)}M`
+           
+        }
+        else if(followers.toString().length=== 7){
+            followersCount = `${followersCount.substring(0, 2)}M`
+            followingCount = `${followingCount.substring(0, 2)}M`
+            
+        }
+        else{
+            followersCount = followers
+            followingCount = following
+        }
      
     
     return (

@@ -4,6 +4,7 @@ import App from './App.jsx';
 import '../sass/main.scss';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from "../component/ErrorFallback.jsx";
+import 'react-toastify/dist/ReactToastify.css';
  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
