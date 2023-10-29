@@ -9,9 +9,7 @@ Create a react website that can fetch  yoour repository and have amazing UI/UX.
 ## Additional functionality
 - Implemented a search bar that can fetch any github repository
 
-### Screenshot
-
-![Circle-22 Calculator Project](Circle-22-Calculator-Project.PNG)
+ 
 
 ## PeterGitFetcher Functionalities
 Get user repositories
@@ -87,7 +85,7 @@ npm run dev
     "timeago.js": "^4.0.2"
       -   Used to format the time into nice format
 
-      "toastify-js": "^1.12.0"
+      "react-toastify-js": "^1.12.0"
       
     
   }
