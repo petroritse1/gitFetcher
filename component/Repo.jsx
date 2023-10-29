@@ -7,13 +7,14 @@ import Header from './Header';
 import Form from './Form';
 import { Link, Outlet } from 'react-router-dom';
  
-function Repo({children,setValue,onUsername,value}) {
+function Repo({children,setValue,onUsername,value,isLoading}) {
       
     
     return (
-  <>
+  <>    
+       {}
+        <div className="container">
         <Header><Form value={value} setValue={setValue} onUsername={onUsername} /></Header>
-        <div className="center">
             <div className="repo">
 
                 <div className='repo__sidebar'>

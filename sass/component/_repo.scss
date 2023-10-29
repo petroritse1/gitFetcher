@@ -1,22 +1,30 @@
 .repo{
     display:flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap:2rem;
+    
+    gap:1rem;
     flex-direction:column;
-    margin-top:3rem;
+
+    
+    
     @include device(big__tab){
         flex-direction:row;
     }
     &__repo{
-        width:90%;
+        width:80%;
+     
+         margin:0 auto;
+        
         
     }
     &__sidebar{
-        width:90%;
+        width:80%;
+         
+        text-align: center;
         
-        @include device(tab){
-            width:30%;
+        @include device(big__tab){
+            width:22%;
+            align-items: center;
         }
     }
 }

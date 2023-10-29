@@ -29,10 +29,10 @@ function UserProfile({userData,isLoading}) {
 
                 </div>
                 <div className='userProfile__emoji'>
-                     {emoji ? <p>{emoji}</p>:<p>🧛‍♀️</p>}
+                     {emoji ? <p>{emoji}</p>:<p>   🧛‍♀️</p>}
                 </div>
                 <div className="userProfile__bio">
-                    {bio ? <p>{bio}</p>:<p>I love computer<Language/></p>}
+                    {bio ? <p>{bio}</p>:<p>I love computer </p>}
 
                 </div>
                 <div className="userProfile__border"></div>
@@ -51,10 +51,10 @@ function UserProfile({userData,isLoading}) {
                       
                         <div  className='userProfile__info'>
                             
-                            {!location ?<><span><MapPin/> </span> <p>Earth</p> </>:<><span><MapPin/> </span> <p>{location}</p> </>}
+                            {!location ?<><span><MapPin className="userProfile__icon"/> </span> <p>Earth</p> </>:<><span><MapPin className="userProfile__icon"/> </span> <p>{location}</p> </>}
                         </div>
                     <div  className='userProfile__info'>
-                            <><span><Clock/> </span>  
+                            <><span><Clock className="userProfile__icon"/> </span>  
                                     <p>
                                         {format(`${created_at}`,"en_US")}
                                     </p>

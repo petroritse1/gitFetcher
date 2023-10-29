@@ -6,6 +6,8 @@ import RepoList from './RepoList';
 
 import Loader from './Loader';
 import Button from './Button';
+import Header from './Header';
+import Form from './Form';
 
 
 function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {
@@ -13,6 +15,8 @@ function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {
     let allRepoDataLength = allRepoData.length
    
     return (
+        <>
+         
         <div className="showing">
                  {isLoading && <Loader/>}    
                 <div className="card">
@@ -31,6 +35,7 @@ function AllRepo({allRepoData,onNext,onPrev,perPage,onSelectedName,isLoading}) {
                 </div>
                
         </div>
+        </>
     )
 }
 

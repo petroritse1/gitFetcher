@@ -6,12 +6,13 @@ function Dashboard_List({item}) {
     const {text,info,img} = item
     const isRepo = text === "Repo"
     const isError = text === "boundary"
+     
     
     return (
       <div className='dashboard__card-box'>
       
       
-      {isRepo && <Link to="/repo/all"><div className="dashboard__card">
+      {isRepo && <Link  to="repo/all"><div className="dashboard__card special">
                         <div className="dashboard__img">{img}</div>
                         <div >
                         

@@ -14,13 +14,42 @@ function Dashboard({userData}) {
     if(!userData) return;
     const isData = userData !== null
     const {public_gists,public_repos,followers,following} = userData
+    let followersCount = followers.toString()
+    let followingCount = following.toString()
+    
+    if(followers.toString().length=== 4){
+    //    
+        followersCount = `${followersCount.substring(0, 1)}K`
+        followingCount = `${followingCount.substring(0, 1)}K`
+    }
+    else if(followers.toString().length === 5){
+        
+         
+        followersCount = `${followersCount.substring(0, 2)}K`
+        followingCount = `${followingCount.substring(0, 2)}K`
+    }
+    else if(followers.toString().length=== 6){
+        followersCount = `${followersCount.substring(0, 1)}M`
+        followingCount = `${followingCount.substring(0, 1)}M`
+       
+    }
+    else if(followers.toString().length=== 7){
+        followersCount = `${followersCount.substring(0, 2)}M`
+        followingCount = `${followingCount.substring(0, 2)}M`
+        
+    }
+    else{
+        followersCount = followers
+        followingCount = following
+    }
+
     const newUserData = [{
         info:public_repos,img:<p> 📗</p>
         ,text:"Repo"
     },
     ,
     {
-        info:followers,img:<p> 👨‍👧‍👧</p>,text:"Followers"
+        info:followersCount,img:<p> 👨‍👧‍👧</p>,text:"Followers"
     },
     {
         info:following,img:<p> &#128100;</p>,text:"Following"

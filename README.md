@@ -1,25 +1,27 @@
-# Github fetch repo
+# PeterGithub fetch repo
 This is a project for the AltSchool Africa Frontend Engineering Exam.
 
 ## Overview
 
 ### The challenge
 
-Create a github page that fetches repo.
+Create a react website that can fetch  yoour repository and have amazing UI/UX.
+## Additional functionality
+- Implemented a search bar that can fetch any github repository
 
 ### Screenshot
 
 ![Circle-22 Calculator Project](Circle-22-Calculator-Project.PNG)
 
-## CitFetcher Functionalities
+## PeterGitFetcher Functionalities
 Get user repositories
 Get user Single repositories
 
-This Github fetcher  is used to perform basic fetching of github repositories and display additional info about it:
+This PeterGithub-fetcher  is used to perform basic fetching of github repositories and display additional info about it:
  
  
 
-## How to Use the GitFetcher
+## How to Use the PeterGitFetcher
 
 Follow these simple steps to make any operation between numbers after you open the calculator app:
 
@@ -68,14 +70,26 @@ npm run dev
 ## Dependencies and Libary used
 
 "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.2.0", 
+       - Used to write and display the components;
+    " 
+       
     "react-error-boundary": "^4.0.11",
+       -    For displaying error message Whenever there is an application error  or bug
     "react-feather": "^2.0.10",
+       -    Used react feather for amazing and easy to use icons
     "react-icons": "^4.11.0",
+       -  Used react-icons for more powerful and complex icons;
     "react-router-dom": "^6.17.0",
+      -   Used the libary for going to different places on the website without restarting  or resetting the app which can be very handly and useful
     "sass": "^1.69.4",
+        - Used to write and bundle css code
     "timeago.js": "^4.0.2"
+      -   Used to format the time into nice format
+
+      "toastify-js": "^1.12.0"
+      
+    
   }
 
 ## Links

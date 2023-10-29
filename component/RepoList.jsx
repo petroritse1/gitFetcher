@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import {format} from "timeago.js"
+import Language from './Language';
+import {BiLogoJavascript,BiLogoPython,BiLogoHtml5,BiLogoCss3, BiCodeBlock} from "react-icons/bi"
  
 
 function RepoList({item,onSelectedName}) {
    
-     const {name,created_at,visibility} = item
+     const {name,visibility,language} = item
      
      
       
@@ -26,9 +28,9 @@ function RepoList({item,onSelectedName}) {
                      
                             <p>Starter files for {name} project</p>
                     </div>
-                    <div className="card__time">
-                        
-                        <p>{format(created_at)}</p>
+                    <div className="card__language">
+                       
+                        <Language>{language}</Language>
                     </div>
                     
                     

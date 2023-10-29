@@ -26,9 +26,7 @@ function Profile({userData,isLoading}) {
                     <h5 className="profile__id">{login}</h5>
 
                 </div>
-                <div>
-                     {bio && <p>{bio}</p>}
-                </div>
+                
                 <div className="profile__bio">
                     {bio ? <p>{bio}</p>:<p>Am a fun guy||</p>}
 

@@ -12,6 +12,7 @@ import Dashboard from '../component/Dashboard';
 import ErrorPage from '../component/ErrorPage';
 import TestError from '../component/TestError';
 import Main from '../component/Main';
+import Footer from '../component/Footer';
  
 function App() {
    
@@ -124,7 +125,7 @@ function App() {
                     <Route path='page'  element={
                     <Main>
 
-                    <SingleRepo repoData={repoData} userData={userData} selectedName={selectedName}/>
+                    <SingleRepo repoData={repoData} userData={userData} selectedName={selectedName} isLoading={isLoading}/>
                     </Main>
                     }/>
                     <Route path='all'  element={<Main>
@@ -137,9 +138,9 @@ function App() {
           </Route>
           <Route path="*" element={<ErrorPage isLoading={isLoading}/>}/>
   </Routes>
-    {isLoading && <Loader/>}
+ 
   </BrowserRouter>
-  
+  {/* <Footer/> */}
     </>
   )
 }

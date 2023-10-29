@@ -44,16 +44,18 @@
         padding:0.45rem 0.75rem;
         margin:0 auto;
         margin-left:2rem;
-
+        
+        justify-content: space-between;
         
         @include device(phone){
             width:8rem;
-           margin-left:0;
+            margin-left:0;
         }
         
         @include device(tab){
             padding:1rem 1.25rem;
             width:10rem;
+            justify-content: space-between;
             
             
            }
@@ -84,9 +86,12 @@
        }
     }
     &__text{
-       font-size: .8rem;
+       font-size: 1rem;
        color:var(--color-text-dark);
        padding-left:.5rem;
+       @include device(phone){
+        font-size:.8rem;
+       }
         @include device(tab){
             font-size:1rem;
         }
