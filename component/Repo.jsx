@@ -5,16 +5,20 @@ import RepoList from './RepoList'
 import Profile from './Profile';
 import Header from './Header';
 import Form from './Form';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet,useLocation } from 'react-router-dom';
  
 function Repo({children,setValue,onUsername,value,isLoading}) {
-      
+      const location = useLocation()
+      console.log(location.pathname)
+      const isPages = location.pathname === "/repo/page"
+
     
     return (
   <>    
-       {}
+       
         <div className="container">
-        <Header><Form value={value} setValue={setValue} onUsername={onUsername} /></Header>
+            {!isPages && <Header><Form value={value} setValue={setValue} onUsername={onUsername} /></Header>
+            }
             <div className="repo">
 
                 <div className='repo__sidebar'>

@@ -3,7 +3,7 @@ import {BiLogoJavascript,BiLogoPython,BiLogoHtml5,BiLogoCss3, BiCodeBlock} from 
 
 function Language({children}) {
     const language = children 
-    console.log(language)
+   
     if(language === "JavaScript"){
         return(
             <>

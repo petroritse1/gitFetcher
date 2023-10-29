@@ -5,10 +5,13 @@ import { format } from 'timeago.js';
 import Language from './Language';
 import { NavLink } from 'react-router-dom';
 import Loader from './Loader';
+import Button from './Button';
 import {TbGitFork,} from "react-icons/tb"
 import {BiGitRepoForked} from "react-icons/bi"
 import {FaRegEye} from "react-icons/fa";
 import {HiOutlineScale} from "react-icons/hi";
+import {useNavigation} from "react-router-dom";
+
 
 
 
@@ -16,7 +19,8 @@ function SinglePage({repoData,userData,selectedName,isLoading}) {
     if (repoData === null) return;
     if (userData === null) return;
     const{description,name,visibility,updated_at,language,forks,html_url,watchers,licence,created_at} = repoData
-    const {avatar_url,login} = userData
+    const {avatar_url,login} = userData;
+    const navigation = useNavigation()
 
                            
     return (<>
@@ -68,6 +72,7 @@ function SinglePage({repoData,userData,selectedName,isLoading}) {
 
                     </div>
             </div>
+            <Button onClick={()=>navigate(-1)}>back</Button>
       
     </>
     )
