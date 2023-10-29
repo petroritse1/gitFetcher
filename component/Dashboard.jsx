@@ -62,7 +62,7 @@ function Dashboard({userData}) {
     return (
         <header>
 
-            <div className="dashboard">
+            <div className="dashboard"  key={ nanoid() }>
             {newUserData.map((item)=>{
                 return(
                     <ul className='dashboard__list'> 

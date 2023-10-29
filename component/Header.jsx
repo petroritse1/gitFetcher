@@ -21,7 +21,7 @@ function Header({children}) {
         </Link>
             {children}
               
-             <p className='navbar__text'> Altschool Africa... </p>
+             <p className='navbar__text'>ALT/SOE/023/0611 </p>
             
 
         </nav>

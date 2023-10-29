@@ -58,7 +58,7 @@ function App() {
        try{
          const res = await fetch(`https://api.github.com/users/${username}`)
          if(!res.ok){
-           toast.error("failed to get user!")
+            
            throw new Error("failed to get user")
 
           }
@@ -69,7 +69,7 @@ function App() {
        }
        catch(err){
          setIsError(err.message)
-         toast.error("User not found")
+         toast.error("User not found!")
           
  
        }
