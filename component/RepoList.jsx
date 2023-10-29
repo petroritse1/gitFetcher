@@ -30,6 +30,7 @@ function RepoList({item,onSelectedName}) {
                     </div>
                     <div className="card__language">
                        
+                   
                         <Language>{language}</Language>
                     </div>
                     

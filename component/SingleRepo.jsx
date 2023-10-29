@@ -15,8 +15,10 @@ import {HiOutlineScale} from "react-icons/hi";
 function SinglePage({repoData,userData,selectedName,isLoading}) {
     if (repoData === null) return;
     if (userData === null) return;
-    const{description,name,visibility,updated_at,language,forks,html_url,watchers,licence} = repoData
+    const{description,name,visibility,updated_at,language,forks,html_url,watchers,licence,created_at} = repoData
     const {avatar_url,login} = userData
+
+                           
     return (<>
             {isLoading && <Loader/>}
             <div className="single">
@@ -28,8 +30,11 @@ function SinglePage({repoData,userData,selectedName,isLoading}) {
                     <img src={avatar_url} className="single__img"/>
                     <p>{login}</p>
                 </div>
-                <div className="single__time"><p><Clock/></p><p>{format(updated_at)}</p></div>
+                <div className="single__update">
+
+                     <div className="single__time ">updated<p> <Clock className='single__icons'/></p><p > {format(updated_at)}</p></div>
                  
+                </div>
              </div>
              <div className="single__body">
 
@@ -52,7 +57,9 @@ function SinglePage({repoData,userData,selectedName,isLoading}) {
                                 <p className="single__socials">
                                     <Link className='single__icons'/>
 
-                                    <a href={`${html_url}`} className="single__link" target="_blank">{html_url} </a>
+                                    <a href={`${html_url}`} className="single__link" target="_blank"style={{
+
+                                    }}> {html_url} </a>
                                 </p>
 
                             </p>
