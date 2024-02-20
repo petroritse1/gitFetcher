@@ -99,3 +99,36 @@ img{
     width:100%;
 }
  
+ 
+  .snow-wrapper{
+    pointer-events:none;
+    position:absolute;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+  }
+
+  .snow{
+     width:.8rem;
+     height:.8rem;
+     background:#fff;
+     animation:fallingSnow 4s linear infinite;
+     border-radius:50%;
+     left:0;
+     position:absolute;
+     top:-40px;
+  }
+
+
+
+  @keyframes fallingSnow {
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(50vh)
+    }
+  }
+  

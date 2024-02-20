@@ -1,11 +1,30 @@
+.loader_container{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  z-index:1000;
+  background:green;
+  cursor:none;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.098);
+ 
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+ 
+   
+}
+
+
+
 .loader {
   display:flex;
-  justify-content: center;
-  align-items: center;
+  place-items:center;
   /* margin:0 auto; */
- 
-  margin:0 auto;
-   
+  color:var(--color-primary);
+  margin:17% auto;
+  
     width: 50px;
     height: 24px;
     background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%

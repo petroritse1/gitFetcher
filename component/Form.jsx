@@ -15,7 +15,7 @@ function Form({value,setValue,onUsername}) {
         e.preventDefault()
         if(!value)return;
         onUsername(value)
-        console.log(location.pathname)
+        
         if(location.pathname === "/repo/page" ){
             console.log("repo/page")
             setDisabled(true)

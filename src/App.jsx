@@ -57,6 +57,7 @@ function App() {
       setIsLoading(true);
        try{
          const res = await fetch(`https://api.github.com/users/${username}`)
+         console.log(res)
          if(!res.ok){
             
            throw new Error("failed to get user")
@@ -119,7 +120,8 @@ function App() {
         <Routes>
             <Route path="/" index element={
               <Main>
-            <Header><Form value={value} setValue={setValue} onUsername={setUsername} /></Header>
+                {isLoading && <Loader/>}
+            <Header><Form value={value} setValue={setValue} onUsername={setUsername} isLoading={isLoading} /></Header>
             <Dashboard userData={userData} isLoading={isLoading}/>
               </Main>
             } />
